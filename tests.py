@@ -33,7 +33,7 @@ class TestBooksCollector:
         assert collector_whith_books.get_books_with_specific_genre(collector_whith_books.genre[3]) == [data.books_name[3], data.books_name[4], data.books_name[5]] #['Дети с Горластой улицы', 'Алиса в Зазеркалье', 'Винни-Пух идет в гости']
 
     def test_get_books_genre_return_dict_books_genre(self, collector_whith_books):
-        assert collector_whith_books.get_books_genre()
+        assert collector_whith_books.get_books_genre() == data.books_genre_dict
 
     def test_get_books_for_children_list_children_book(self, collector_whith_books):
         assert collector_whith_books.get_books_for_children() == data.list_children_book
