@@ -49,4 +49,5 @@ class TestBooksCollector:
         assert len(collector_whith_books.favorites) == favorit_list_len-1
 
     def test_get_list_of_favorites_books_list_not_empty(self, collector_whith_books):
-        assert collector_whith_books.get_list_of_favorites_books()
+        collector_whith_books.add_book_in_favorites(data.books_name[3])
+        assert collector_whith_books.get_list_of_favorites_books() == [data.books_name[7], data.books_name[0], data.books_name[3]]
